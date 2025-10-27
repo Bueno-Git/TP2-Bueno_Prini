@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parque Nacional El Palmar</title>
+  <link rel="icon" type="image/png" href="../Assets/palmera_icono.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bhaiksuki&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+  <h1><a href="../index.html">El Palmar</a></h1>
+
+  <span class="menu-icon" onclick="toggleMenu()">☰</span>
+
+  <nav class="menu-header">
+    <a href="../index.html">Inicio</a>
+    <a href="historia.html">Historia</a>
+    <a href="fauna_flora.html">Fauna y Flora</a>
+    <a href="medio.html">Medio Natural</a>
+    <a href="actividades.html">Actividades y Turismo</a>
+    <a href="problemas.html">Problemas Ambientales</a>
+    <a href="contacto.html">El Equipo y Contacto</a>
+  </nav>
+</header>
+
+
+<section class="hero hero-medio">
+  <div class="texto-hero">
+    <h2>Entorno Natural del Palmar</h2>
+    <p>Todo sobre sus medios: climas, relieves e hidrografía</p>
+  </div>
+</section>
+
+
+<section class="bloque-clima">
+  <div class="contenedor-clima">
+    <div class="imagen-clima">
+      <img src="../Assets/clima.JPG" alt="Paisaje representativo del clima del Palmar">
+    </div>
+    <div class="texto-clima">
+      <h2>Clima</h2>
+      <p>El Parque Nacional El Palmar presenta un clima templado o subtropical sin estación seca. Los veranos alcanzan temperaturas medias de 25°C, con máximas que pueden superar los 40°C, mientras que los inviernos rondan los 11°C, con posibles heladas.</p>
+      <p>Las precipitaciones son abundantes, concentrándose principalmente en verano, con un promedio anual de 1400 mm. La humedad relativa es alta (alrededor del 75%) y predominan los vientos del nordeste, sudeste y este.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="bloque-relieve">
+  <div class="contenedor-relieve">
+    <div class="texto-relieve">
+      <h2>Relieve</h2>
+      <p>El Parque Nacional El Palmar se asienta sobre una llanura suavemente ondulada, característica de la ecorregión del Espinal. El terreno presenta leves desniveles que permiten el escurrimiento natural del agua hacia el río Uruguay.</p>
+      <p>Las zonas más elevadas y arenosas son el hábitat ideal para los palmares de yatay más densos, mientras que las depresiones o bajos se transforman en pastizales inundables o pajonales, fundamentales para la biodiversidad del parque.</p>
+    </div>
+    <div class="imagen-relieve">
+      <img src="../Assets/relieve.jpg" alt="Relieve ondulado del Parque Nacional El Palmar">
+    </div>
+  </div>
+</section>
+
+<section class="bloque-hidrografia">
+  <div class="contenedor-hidrografia">
+    <div class="imagen-hidrografia">
+      <img src="../Assets/hidrografia.jpg" alt="Río Uruguay y arroyos del Parque El Palmar">
+    </div>
+    <div class="texto-hidrografia">
+      <h2>Hidrografía</h2>
+      <p>El Parque Nacional El Palmar está íntimamente ligado al agua. Su límite oriental lo define el majestuoso <strong>río Uruguay</strong>, que actúa como vía natural y fuente de vida para el ecosistema.</p>
+      <p>Antes de llegar al río, numerosos <strong>arroyos</strong> recorren el terreno modelando el paisaje: entre ellos se destacan el Arroyo El Palmar, Los Loros, Ubajay y Espino, que alimentan bañados y pastizales húmedos.</p>
+      <p>Estas corrientes no solo aportan agua, sino que también conforman corredores biológicos fundamentales para aves acuáticas, peces y anfibios que dependen del equilibrio hídrico del parque.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Influencia de los elementos naturales.</h2>
+  <p>La diversidad de climas, relieves e hidrografia gera una amplia variedad de ecosistemas y especies.</p>
+  <a href="../paginas/fauna_flora.html" class="boton-verde">Ver más</a>
+</section>
+
+<footer>
+  <div class="footer-contenido">
+    <div class="footer-columna">
+      <img src="../Assets/Logo.png" alt="Logo del Parque" class="footer-logo">
+      <p>© 2025 Parque Nacional El Palmar</p>
+    </div>
+
+    <div class="footer-columna">
+      <h4>Secciones</h4>
+      <nav class="footer-nav">
+        <a href="../index.html">Inicio</a>
+        <a href="historia.html">Historia</a>
+        <a href="fauna_flora.html">Fauna y Flora</a>
+        <a href="medio.html">Medio Natural</a>
+        <a href="actividades.html">Actividades y Turismo</a>
+        <a href="problemas.html">Problemas Ambientales</a>
+      </nav>
+    </div>
+
+    <div class="footer-columna">
+      <h4>Contacto</h4>
+      <p>Email: <a href="mailto:info@elpalmar.gob.ar">info@elpalmar.gob.ar</a></p>
+      <p>Ubicación: Entre Ríos, Argentina</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  const menu = document.querySelector(".menu-header");
+  if (menu) {
+    menu.classList.toggle("show");
+  } else {
+    console.error("No se encontró el elemento .menu-header");
+  }
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

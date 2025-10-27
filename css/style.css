@@ -1,0 +1,991 @@
+body {
+  font-family: 'Outfit', sans-serif;
+  margin-top: 57px;
+  padding: 0;
+  background-color: #dad3c7; /* Beige claro */
+  color: #4B7F52; /* Verde palmar */
+  overflow-x: hidden;
+}
+
+/* --- HEADER FINAL LIMPIO --- */
+header {
+  position: fixed;
+  z-index: 1100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #4B7F52;
+  background-image: url("../Assets/patron_palmeras.jpg");
+  background-repeat: repeat-x;
+  background-position: bottom center;
+  background-size: contain;
+  margin: 0;
+  top: 0;
+}
+
+header h1 a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+header .menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff;
+}
+
+header nav.menu-header {
+  display: none;
+  flex-direction: column;
+  background-color: #4B7F52;
+  position: absolute;
+  top: 110%;
+  right: 20px;
+  width: 220px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  z-index: 1200;
+}
+
+header nav.menu-header a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 0;
+  border-bottom: 1px solid #E6B450;
+}
+
+header nav.menu-header a:hover {
+  color: #E6B450;
+}
+
+header nav.menu-header.show {
+  width: 250px;
+  display: flex;
+}
+
+
+.hero {
+  position: relative;
+  min-height: 70vh;
+  max-height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  /*Imagen*/
+  background-image: url("../Assets/palmar-banner.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+.texto-hero {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.45);
+  padding: 25px 40px;
+  border-radius: 10px;
+  max-width: 700px;
+}
+
+.texto-hero h2 {
+  margin: 0 0 12px;
+  font-size: 40px;
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  max-width: 800px;
+}
+
+.texto-hero p {
+  margin: 0;
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+.ubicacion{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px;
+  padding: 60px 10%;
+  gap: 40px;
+}
+
+.ubicacion .texto{
+  flex: 1;
+  color: #4B7F52;
+  font-size: 25px;
+}
+
+.ubicacion .imagen_ubicacion{
+  flex: 1;
+}
+
+.ubicacion img{
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2);
+}
+
+.contenedor-botones {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  /* flex-wrap: wrap; Va a poder permitir que se acomoden si la pantalla es pequeña */
+  padding: 60px 10%;
+}
+
+.boton-inicio {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+  width: 280px;
+}
+
+.boton-inicio img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  filter: brightness(70%);
+  transition: transform 0.4s ease, filter 0.4s ease;
+  border-radius: 12px;
+}
+
+.boton-inicio:hover img {
+  transform: scale(1.05);
+  filter: brightness(90%);
+}
+
+.boton-inicio h3 {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  bottom: 20px;
+  left: 20px;
+  font-size: 1.3rem;
+  font-family: "Merriweather", serif;
+  z-index: 2;
+}
+
+.cta {
+  background-color: rgba(230, 180, 80, 0.15);
+  text-align: center;
+  padding: 90px 15%;
+  color: #4B7F52;
+}
+
+.cta h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.cta p {
+  padding: 10px;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.boton-verde {
+  background-color: #4B7F52;
+  color: white;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.boton-verde:hover {
+  background-color: #3E6B46;
+}
+
+/* --- Estilos Generales para el Bloque 4 --- */
+.tarjetas {
+    padding: 100px 20px;
+    background-color: #f0fff0; /* Un verde muy claro, que sugiera naturaleza */
+    text-align: center;
+}
+
+.tarjetas h2 {
+    color: #2e8b57;
+    margin-bottom: 15px;
+}
+
+.tarjetas .intro-tarjetas {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    font-size: 1.1em;
+}
+
+/* --- Estilos del Grid de Reconocimiento --- */
+.grid-reconocimiento {
+    display: grid;
+    /* Crea 4 columnas iguales. En pantallas pequeñas, pasará a 1 o 2 columnas (ver media query) */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tarjeta-logro {
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    border-bottom: 4px solid #2e8b57; /* Detalle de color */
+}
+
+.tarjeta-logro:hover {
+    transform: translateY(-5px); /* Pequeño efecto al pasar el mouse */
+}
+
+.tarjeta-logro img {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 15px;
+  justify-content: center;
+}
+
+.tarjeta-logro h3 {
+    color: #4a4a4a;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* HISTORIA */
+
+/* Bloque 1 */
+.hero-historia {
+  background-image: url("../Assets/historia-banner.JPG");
+}
+
+/* Bloque 2 */
+.historia-bloque {
+  padding: 75px 10%;
+}
+
+.historia-bloque h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #264027;
+  margin-bottom: 50px;
+}
+
+.historia-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.historia-grid .card {
+  border-radius: 12px;
+  padding: 25px;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.historia-grid .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.historia-grid h3 {
+  color: #4a7c59;
+  margin-bottom: 10px;
+}
+
+/* Bloque 3 */
+.grid-hitos {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto; 
+    align-items: center; 
+}
+
+.hito-contenido {
+    padding: 20px;
+    text-align: left;
+    background-color: white;
+    border-left: 5px solid #2e8b57; /* Verde */
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.hito-imagen img {
+  width: 70%;
+  height: auto;
+  display: block;
+  margin: 0 auto; 
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* Bloque 4 */
+.manejo {
+  padding: 80px 10%;
+}
+
+.contenido-manejo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
+
+.contenido-manejo .texto {
+  flex: 1 1 450px;
+}
+
+.contenido-manejo .texto h2 {
+  color: #264027;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contenido-manejo .texto h3 {
+  color: #4a7c59;
+  margin-top: 25px;
+}
+
+.contenido-manejo .texto p {
+  line-height: 1.6;
+  color: #333;
+}
+
+.contenido-manejo .imagen {
+  flex: 1 1 350px;
+}
+
+.contenido-manejo .imagen img {
+  margin-top: 80px;
+  padding: auto;
+  width: 105%;
+  height: 105%;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+/* FAUNA Y FLORA */
+
+/* Bloque 1 */
+.hero-fauna_flora {
+  background-image: url("../Assets/fauna_flora-banner.jpg");
+  width: 100%;
+}
+
+/* Bloque 2 */
+.ecosistemas {
+  background-color: #f9f7f3; /* #f9f7f3 */
+  padding: 70px 10%;
+}
+
+.ecosistemas h2 {
+  text-align: center;
+  color: #2f4c31; /* verde oscuro */
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+
+.ecosistemas p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  color: #4a4a4a;
+  line-height: 1.6;
+}
+
+.ecos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* dos columnas */
+  gap: 30px;
+}
+
+.eco-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.eco-img {
+  width: 100%;
+  height: 220px;              /* altura fija */
+  object-fit: cover;          /* mantiene proporción y recorta si queres */
+  object-position: center;    /* pone "top" o "center 30/20%" si querés poner enfasis arriba en la imagen prini */
+  display: block;
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.eco-desc {
+  padding: 18px;
+}
+
+.eco-desc h3 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+  color: #386947;
+}
+
+.eco-desc p {
+  text-align: left;
+  margin: 0;
+  line-height: 1.6;
+  color: #555;
+}
+
+.eco-card:hover,
+.eco-card:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+}
+
+.eco-card:hover .eco-img,
+.eco-card:focus-within .eco-img {
+  transform: scale(1.02);
+  filter: brightness(1.02) contrast(1.02);
+}
+
+
+/* Bloque 3 y 4 */
+.carousel-img-fixed {
+    height: 450px; 
+    object-fit: cover; 
+    object-position: center;
+    
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-control-prev-icon.invert-icon,
+.carousel-control-next-icon.invert-icon {
+    filter: invert(100%); 
+}
+
+.carousel-item img {
+  width: 60%;
+  max-height: 500px;
+  object-fit: cover;   /* Evita distorsión */
+  object-position: center;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+
+
+/* MEDIO NATURAL */
+
+/* Bloque 1 */
+.hero-medio {
+  background-image: url(../Assets/medio-banner.jpg)
+}
+
+/* Bloque 2 */
+.bloque-clima {
+  background-color: #ffffff;
+  padding: 60px 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.contenedor-clima {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  gap: 40px;
+}
+
+.imagen-clima {
+  flex: 1 1 45%;
+}
+
+.imagen-clima img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.imagen-clima img:hover {
+  transform: scale(1.02);
+}
+
+.texto-clima {
+  flex: 1 1 50%;
+  font-family: "Outfit", sans-serif;
+  color: #333;
+}
+
+.texto-clima h2 {
+  color: #4B7F52;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.texto-clima p {
+  line-height: 1.6;
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+}
+
+/* Bloque 3 */
+.bloque-relieve {
+  background-color: #f8f5ef;
+  padding: 60px 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.contenedor-relieve {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.texto-relieve {
+  flex: 1 1 50%;
+  font-family: "Outfit", sans-serif;
+  color: #333;
+}
+
+.texto-relieve h2 {
+  color: #4B7F52;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.texto-relieve p {
+  line-height: 1.6;
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+}
+
+.imagen-relieve {
+  flex: 1 1 45%;
+}
+
+.imagen-relieve img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.imagen-relieve img:hover {
+  transform: scale(1.02);
+}
+
+/* Bloque 4 */
+.bloque-hidrografia {
+  background-color: #e8f5f4; /* Verde-azulado muy claro */
+  padding: 60px 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.contenedor-hidrografia {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.imagen-hidrografia {
+  flex: 1 1 45%;
+}
+
+.imagen-hidrografia img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.imagen-hidrografia img:hover {
+  transform: scale(1.02);
+}
+
+.texto-hidrografia {
+  flex: 1 1 50%;
+  font-family: "Outfit", sans-serif;
+  color: #2c3e3b;
+}
+
+.texto-hidrografia h2 {
+  color: #3b7065;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.texto-hidrografia p {
+  line-height: 1.6;
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+}
+
+/* PROBLEMAS AMBIENTALES */
+
+/* Bloque 1 */
+.hero-problemas {
+  background-image: url(../Assets/problemas-banner.jpg)
+}
+
+/* Bloque 2 */
+.problemas-bloque2 {
+  text-align: center;
+  padding: 5rem 2rem;
+  background-color: #f6f9f6;
+}
+
+.problemas-bloque2 h2 {
+  font-size: 2.2rem;
+  color: #2e4a2f;
+  margin-bottom: 1rem;
+}
+
+.problemas-bloque2 .intro {
+  max-width: 750px;
+  margin: 0 auto 3rem;
+  color: #444;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.tarjetas-invasoras {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 70px;
+}
+
+.tarjeta {
+  background: white;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  width: 340px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.tarjeta .contenido {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.tarjeta h3 {
+  color: #2f5e3b;
+  margin-bottom: 0.7rem;
+  font-size: 1.3rem;
+}
+
+.tarjeta p {
+  color: #333;
+  font-size: 0.97rem;
+  line-height: 1.6;
+}
+
+/* Bloque 3 */
+.bloque-impacto {
+  background-color: #f7faf7;
+  padding: 60px 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.contenedor-impacto {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  gap: 40px;
+}
+
+.imagen-impacto {
+  flex: 1 1 45%;
+}
+
+.imagen-impacto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.imagen-impacto img:hover {
+  transform: scale(1.02);
+}
+
+.texto-impacto {
+  flex: 1 1 50%;
+  font-family: "Outfit", sans-serif;
+  color: #333;
+}
+
+.texto-impacto h2 {
+  color: #3e6845;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.texto-impacto p {
+  line-height: 1.6;
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+}
+
+/* Bloque 4 */
+.bloque-desafios {
+  background-color: #ffffff;
+  padding: 70px 5%;
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+}
+
+.bloque-desafios h2 {
+  color: #4B7F52;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+.tarjetas-desafios {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.tarjeta-desafio {
+  background-color: #f7faf7;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  flex: 1 1 300px;
+  max-width: 340px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-desafio img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.tarjeta-desafio h3 {
+  color: #3e6845;
+  font-size: 1.4rem;
+  margin: 15px 0 10px;
+}
+
+.tarjeta-desafio p {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 0 20px 20px;
+}
+
+.tarjeta-desafio:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Bloque 5 */
+.bloque-accion {
+  background-color: #f5fff5;
+  padding: 80px 5%;
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+}
+
+.bloque-accion h2 {
+  color: #4B7F52;
+  font-size: 2.3rem;
+  margin-bottom: 20px;
+}
+
+.intro-accion {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 50px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tarjetas-accion {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.tarjeta-accion {
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 30px 20px;
+  max-width: 320px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-accion:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.tarjeta-accion img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 15px;
+  object-fit: contain;
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
+}
+
+.tarjeta-accion h3 {
+  color: #3e6845;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.tarjeta-accion p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+
+
+
+/* FOOTER */
+
+.footer-contenido {
+  display: grid;
+  grid-template-columns: 0.75fr 1fr 1fr;
+  gap: 30px;
+  padding: 40px 5%;
+  background-color: #333333; /* <- Poner gris oscuro*/
+  color: white;
+}
+
+.footer-columna h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 5px;
+  font-weight: 600;
+}
+
+.footer-logo {
+  max-width: 90px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-nav a {
+  color: #6d6d6d;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+  color: #ffffff;
+}
+
+.footer-columna a {
+  color: #c0c0c0;
+  text-decoration: none;
+}
+
+.footer-columna a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
