@@ -882,7 +882,7 @@ header nav.menu-header.show {
 
 .tarjetas-accion {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
   justify-items: center;
 }
