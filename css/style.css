@@ -894,6 +894,7 @@ header nav.menu-header.show {
   padding: 30px 20px;
   max-width: 320px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-bottom: 4px solid #264027;
 }
 
 .tarjeta-accion:hover {
@@ -906,7 +907,6 @@ header nav.menu-header.show {
   height: 70px;
   margin-bottom: 15px;
   object-fit: contain;
-  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
 }
 
 .tarjeta-accion h3 {
@@ -920,6 +920,199 @@ header nav.menu-header.show {
   color: #333;
   line-height: 1.6;
 }
+
+/* ACTIVIDADES */
+
+/* Bloque 1 */
+.hero-actividades {
+  background-image: url(../Assets/actividades-banner.png)
+}
+
+/* Bloque 2 */
+.bloque-actividades {
+  background-color: #fff;
+  padding: 60px 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.contenedor-actividades {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+}
+
+.actividad {
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.actividad:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+.actividad img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.texto-actividad {
+  padding: 20px;
+  font-family: "Outfit", sans-serif;
+  color: #333;
+}
+
+.texto-actividad h2 {
+  color: #4B7F52;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.texto-actividad p {
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+/* Bloque 3 */
+.bloque-servicios {
+  background-color: #f5fff5;
+  padding: 80px 5%;
+  font-family: "Outfit", sans-serif;
+}
+
+.bloque-servicios h2 {
+  text-align: center;
+  color: #4B7F52;
+  font-size: 2.2rem;
+  margin-bottom: 60px;
+}
+
+.servicio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 60px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fila.inversa {
+  flex-direction: row-reverse;
+}
+
+.imagen-servicio {
+  flex: 1 1 45%;
+}
+
+.imagen-servicio img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.imagen-servicio img:hover {
+  transform: scale(1.02);
+}
+
+.texto-servicio {
+  flex: 1 1 45%;
+  color: #333;
+}
+
+.texto-servicio h3 {
+  font-size: 1.8rem;
+  color: #4B7F52;
+  margin-bottom: 15px;
+}
+
+.texto-servicio p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.texto-servicio a {
+  color: #4B7F52;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.texto-servicio a:hover {
+  color: #2d5233;
+}
+
+/* Bloque 4 */
+.bloque-info {
+  background-color: #f0fff0;
+  padding: 80px 5%;
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+}
+
+.bloque-info h2 {
+  color: #4B7F52;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.info-item {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 30px 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+.icono-info {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+
+.info-item h3 {
+  color: #4B7F52;
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+.info-item p {
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Bloque 5 */
+
+
+
+
+
+
 
 
 
