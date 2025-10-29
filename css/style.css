@@ -1,37 +1,25 @@
+:root {
+  --verde-primario: #4B7F52;
+  --verde-secundario: #2e8b57;
+  --beige: #dad3c7;
+  --sombra-lev: 0 4px 12px rgba(0,0,0,0.12);
+  --radio: 12px;
+  --texto: #4a4a4a;
+  --bg-light: #f7faf7;
+}
+
+
+
 body {
   font-family: 'Outfit', sans-serif;
   margin-top: 57px;
   padding: 0;
-  background-color: #dad3c7; /* Beige claro */
-  color: #4B7F52; /* Verde palmar */
+  background-color: var(--beige); /* Beige claro */
+  color: var(--verde-primario); /* Verde palmar */
   overflow-x: hidden;
 }
 
-/* --- HEADER FINAL LIMPIO --- */
-header {
-  position: fixed;
-  z-index: 1100;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  width: 100%;
-  box-sizing: border-box;
-  background-color: #4B7F52;
-  background-image: url("../assets/patron_palmeras.jpg");
-  background-repeat: repeat-x;
-  background-position: bottom center;
-  background-size: contain;
-  margin: 0;
-  top: 0;
-}
-
-header h1 a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 30px;
-}
-
+/* Header global */
 header {
   position: fixed;
   top: 0;
@@ -43,7 +31,7 @@ header {
   align-items: center;
   padding: 10px 20px;
   box-sizing: border-box;
-  background-color: #4b7f52;
+  background-color: var(--verde-primario);
   background-image: url("../assets/patron_palmeras.jpg");
   background-repeat: repeat-x;
   background-position: bottom center;
@@ -96,8 +84,9 @@ header nav.menu-header.show {
   display: flex;
   width: 250px;
 }
+/* INDEX */
 
-
+/* Hero global - Bloque 1 */
 
 .hero {
   position: relative;
@@ -150,7 +139,10 @@ header nav.menu-header.show {
   font-weight: 400;
 }
 
+/* Bloque 2 */
+
 .index-ubicacion{
+  background-color: var(--bg-light);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -175,7 +167,11 @@ header nav.menu-header.show {
   box-shadow: rgba(0, 0, 0, 0.2);
 }
 
+
+/* Bloque 3 */
+
 .index-contenedor_botones {
+  background-color: var(--bg-light);
   display: flex;
   justify-content: center;
   gap: 25px;
@@ -216,6 +212,64 @@ header nav.menu-header.show {
   z-index: 2;
 }
 
+
+/* Bloque 4 */
+.index-tarjetas {
+    padding: 100px 20px;
+    background-color: #f0fff0; /* Un verde muy claro, que sugiera naturaleza */
+    text-align: center;
+}
+
+.index-tarjetas h2 {
+    color: #2e8b57;
+    margin-bottom: 15px;
+}
+
+.index-tarjetas .index-intro_tarjetas {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    font-size: 1.1em;
+}
+
+/* --- Estilos del Grid de Reconocimiento --- */
+.index-grid-reconocimiento {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.index-tarjeta_logro {
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    border-bottom: 4px solid #2e8b57; /* Detalle de color */
+}
+
+.index-tarjeta_logro:hover {
+    transform: translateY(-5px); /* Pequeño efecto al pasar el mouse */
+}
+
+.index-tarjeta_logro img {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 15px;
+  justify-content: center;
+}
+
+.index-tarjeta_logro h3 {
+    color: #4a4a4a;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+
+/* CTA global - Bloque 5 */
+
 .cta {
   background-color: rgba(230, 180, 80, 0.15);
   text-align: center;
@@ -248,59 +302,54 @@ header nav.menu-header.show {
   background-color: #3E6B46;
 }
 
-/* --- Estilos Generales para el Bloque 4 --- */
-.index-tarjetas {
-    padding: 100px 20px;
-    background-color: #f0fff0; /* Un verde muy claro, que sugiera naturaleza */
-    text-align: center;
+/* INDEX MEDIA QUERIES */
+
+@media (max-width: 480px) {
+  header {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 6px;
+  }
+  header h1 a {
+    font-size: 22px;
+  }
+  .menu-icon {
+    font-size: 26px;
+  }
+  header nav.menu-header.show {
+    width: 150px;
+  }
+  .index-ubicacion {
+    padding-top: 20px;
+  }
+  .index-contenedor_botones {
+    flex-direction: column;
+    align-items: center;
+  }
+  .index-grid-reconocimiento {
+    grid-template-columns: 1fr;
+  }
 }
 
-.index-tarjetas h2 {
-    color: #2e8b57;
-    margin-bottom: 15px;
-}
-
-.index-tarjetas .index-intro_tarjetas {
-    max-width: 800px;
-    margin: 0 auto 50px;
-    font-size: 1.1em;
-}
-
-/* --- Estilos del Grid de Reconocimiento --- */
-.index-grid_reconocimiento {
-    display: grid;
-    /* Crea 4 columnas iguales. En pantallas pequeñas, pasará a 1 o 2 columnas (ver media query) */
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.index-tarjeta_logro {
-    background-color: white;
-    padding: 30px 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    text-align: center;
-    border-bottom: 4px solid #2e8b57; /* Detalle de color */
-}
-
-.index-tarjeta_logro:hover {
-    transform: translateY(-5px); /* Pequeño efecto al pasar el mouse */
-}
-
-.index-tarjeta_logro img {
-  width: 90px;
-  height: 90px;
-  margin-bottom: 15px;
-  justify-content: center;
-}
-
-.index-tarjeta_logro h3 {
-    color: #4a4a4a;
-    margin-top: 0;
-    margin-bottom: 10px;
+@media (min-width: 481px) and (max-width: 960px) {
+  header nav.menu-header.show {
+    width: 200px;
+  }
+  .index-tarjeta_logro {
+    padding: 20px 10px;
+  }
+  .index-ubicacion {
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 5%;
+  }
+  .index-contenedor_botones {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .index-grid-reconocimiento {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /* HISTORIA */
@@ -376,8 +425,6 @@ header nav.menu-header.show {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-
-
 /* Bloque 4 */
 
 .historia-contenido_manejo {
@@ -420,7 +467,49 @@ header nav.menu-header.show {
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
+/* HISTORIA MEDIA QUERIES */
 
+@media (max-width: 480px) {
+  .hero,
+  .hero-historia {
+    min-height: 45vh;
+    padding: 30px 5vw;
+    font-size: 1.1em;
+  }
+  header {
+    padding: 8px 10px;
+    z-index: 1100;
+    width: 100%; /* Corregido para responsividad */
+  }
+  .menu-icon {
+    font-size: 28px;
+    z-index: 1200;
+  }
+  .historia-usos {
+    grid-template-columns: 1fr;
+  }
+  .historia-grid_hitos {
+    grid-template-columns: 1fr;
+  }
+  .historia-contenido_manejo {
+    flex-direction: column;
+  }
+  .historia-contenido_manejo .manejo-imagen {
+    margin-bottom: 150px;
+  }
+}
+@media (min-width: 481px) and (max-width: 960px) {
+  .historia-usos {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .historia-grid_hitos {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .historia-contenido_manejo .manejo-imagen {
+    margin-bottom: 170px;
+  }
+}
 
 
 
@@ -501,12 +590,11 @@ header nav.menu-header.show {
   box-shadow: 0 12px 30px rgba(0,0,0,0.10);
 }
 
-.eco-card:hover .fauna_flora-eco-img,
-.eco-card:focus-within .fauna_flora-eco-img {
+.eco-card:hover .fauna_flora-eco-card,
+.eco-card:focus-within .fauna_flora-eco-card {
   transform: scale(1.02);
   filter: brightness(1.02) contrast(1.02);
 }
-
 
 /* Bloque 3 y 4 */
 .carousel-img-fixed {
@@ -540,6 +628,32 @@ header nav.menu-header.show {
   object-position: center;
   border-radius: 15px;
   transition: transform 0.3s ease;
+}
+
+/* FAUNA Y FLORA MEDIA QUERIES */
+
+@media (max-width: 480px) {
+  .fauna_flora-ecos-grid {
+    grid-template-columns: 1fr;
+  }
+  .carousel-caption {
+    display: block !important;
+    background-color: rgba(0,0,0,0.55) !important;
+    color: #fff;
+    border-radius: 10px;
+    padding: 8px;
+    font-size: 0.95em;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    width: auto;
+    max-width: 95vw;
+  }
+}
+@media (min-width: 481px) and (max-width: 960px) {
+  .fauna_flora-ecos-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 
@@ -586,7 +700,6 @@ header nav.menu-header.show {
 
 .medio-texto_clima {
   flex: 1 1 50%;
-  font-family: "Outfit", sans-serif;
   color: #4a4a4a;
 }
 
@@ -621,7 +734,6 @@ header nav.menu-header.show {
 
 .medio-texto_relieve {
   flex: 1 1 50%;
-  font-family: "Outfit", sans-serif;
   color: #4a4a4a;
 }
 
@@ -690,7 +802,6 @@ header nav.menu-header.show {
 
 .medio-texto_hidrografia {
   flex: 1 1 50%;
-  font-family: "Outfit", sans-serif;
   color: #4a4a4a;
 }
 
@@ -705,6 +816,112 @@ header nav.menu-header.show {
   margin-bottom: 12px;
   font-size: 1.05rem;
 }
+
+
+/* MEDIO NATURAL MEDIA QUERIES */
+
+@media (max-width: 480px) {
+  .medio-contenedor_clima,
+  .medio-contenedor_relieve,
+  .medio-contenedor_hidrografia {
+    flex-direction: column;
+    gap: 24px;
+    align-items: stretch;
+  }
+  .medio-imagen_clima,
+  .medio-imagen_relieve,
+  .medio-imagen_hidrografia {
+    order: 1;
+  }
+  .medio-texto_clima,
+  .medio-texto_relieve,
+  .medio-texto_hidrografia {
+    order: 2;
+  }
+  .medio-imagen_clima img,
+  .medio-imagen_relieve img,
+  .medio-imagen_hidrografia img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    max-height: 220px;
+    margin: 0 auto 12px auto;
+    display: block;
+    object-fit: cover;
+  }
+  .medio-texto_relieve,
+  .medio-texto_hidrografia {
+    padding-bottom: 10px;
+  }
+  .medio-imagen_relieve,
+  .medio-imagen_hidrografia {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  .medio-bloque_relieve,
+  .medio-bloque_hidrografia {
+    display: block !important;
+    width: 100vw;
+    overflow-x: hidden;
+    padding: 40px 0;
+  }
+  .medio-contenedor_relieve,
+  .medio-contenedor_hidrografia {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px;
+    align-items: stretch;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  .medio-bloque_relieve,
+  .medio-bloque_hidrografia {
+    padding: 40px 4vw;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 960px) {
+  .medio-bloque_clima,
+  .medio-bloque_relieve,
+  .medio-bloque_hidrografia {
+    padding: 40px 3vw;
+  }
+  .medio-contenedor_clima,
+  .medio-contenedor_relieve,
+  .medio-contenedor_hidrografia {
+    flex-direction: row;
+    gap: 32px;
+    align-items: center;
+  }
+  .medio-imagen_clima,
+  .medio-imagen_relieve,
+  .medio-imagen_hidrografia {
+    flex: 1 1 350px;
+    max-width: 350px;
+  }
+  .medio-imagen_clima img,
+  .medio-imagen_relieve img,
+  .medio-imagen_hidrografia img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    max-height: 220px;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+  .medio-texto_clima,
+  .medio-texto_relieve,
+  .medio-texto_hidrografia {
+    flex: 2 1 0;
+    font-size: 1.08rem;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
 
 
 /* ACTIVIDADES */
@@ -750,7 +967,6 @@ header nav.menu-header.show {
 
 .texto-actividad {
   padding: 20px;
-  font-family: "Outfit", sans-serif;
   color: #4a4a4a;
 }
 
@@ -769,7 +985,6 @@ header nav.menu-header.show {
 .actividades-bloque-servicios {
   background-color: #f5fff5;
   padding: 80px 5%;
-  font-family: "Outfit", sans-serif;
 }
 
 .actividades-bloque-servicios h2 {
@@ -823,7 +1038,7 @@ header nav.menu-header.show {
 }
 
 .texto-servicio p {
-  font-size: 1.55rem;
+  font-size: 1.4rem;
   line-height: 1.6;
 }
 
@@ -843,7 +1058,6 @@ header nav.menu-header.show {
   background-color: #f0fff0;
   padding: 80px 5%;
   text-align: center;
-  font-family: "Outfit", sans-serif;
 }
 
 .actividades-bloque-info h2 {
@@ -899,6 +1113,41 @@ header nav.menu-header.show {
   justify-content: center;
 }
 
+
+/* ACTIVIDADES MEDIA QUERIES */
+
+@media (max-width: 480px) {
+  .actividades-contenedor-actividades {
+    grid-template-columns: 1fr;
+  }
+  .servicio {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .imagen-servicio,
+  .texto-servicio {
+    flex: 1 1 100%;
+  }
+  .actividades-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 481px) and (max-width: 960px) {
+  .actividades-contenedor-actividades {
+    grid-template-columns: 1fr 1fr;
+  }
+  .servicio {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .imagen-servicio,
+  .texto-servicio {
+    flex: 1 1 100%;
+  }
+  .actividades-info-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
 
 
 /* PROBLEMAS AMBIENTALES */
@@ -1008,7 +1257,6 @@ header nav.menu-header.show {
 
 .problemas-texto_impacto {
   flex: 1 1 50%;
-  font-family: "Outfit", sans-serif;
   color: #4a4a4a;
 }
 
@@ -1029,7 +1277,6 @@ header nav.menu-header.show {
   background-color: #ffffff;
   padding: 70px 5%;
   text-align: center;
-  font-family: "Outfit", sans-serif;
 }
 
 .problemas-desafios h2 {
@@ -1046,9 +1293,9 @@ header nav.menu-header.show {
 }
 
 .problemas-tarjeta_desafio {
-  background-color: #f7faf7;
-  border-radius: 14px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: var(--bg-light);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra-lev);
   overflow: hidden;
   flex: 1 1 300px;
   max-width: 340px;
@@ -1061,17 +1308,17 @@ header nav.menu-header.show {
   object-fit: cover;
 }
 
-.problemas-tarjeta-desafio h3 {
-  color: #2e8b57;
+.problemas-tarjeta_desafio h3 {
+  padding-top: 10px;
+  color: var(--verde-secundario);
   font-size: 1.4rem;
-  margin: 15px 0 10px;
 }
 
 .problemas-tarjeta_desafio p {
-  color: #4a4a4a;
+  color: var(--texto);
   font-size: 1rem;
   line-height: 1.6;
-  padding: 0 20px 20px;
+  padding: 10px 20px 20px;
 }
 
 .problemas-tarjeta_desafio:hover {
@@ -1084,7 +1331,6 @@ header nav.menu-header.show {
   background-color: #f5fff5;
   padding: 80px 5%;
   text-align: center;
-  font-family: "Outfit", sans-serif;
 }
 
 .problemas-accion h2 {
@@ -1111,12 +1357,12 @@ header nav.menu-header.show {
 
 .problemas-tarjeta_accion {
   background-color: #ffffff;
-  border-radius: 14px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra-lev);
   padding: 30px 20px;
   max-width: 320px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-bottom: 4px solid #2e8b57;
+  border-bottom: 4px solid var(--verde-secundario);
 }
 
 .problemas-tarjeta_accion:hover {
@@ -1132,16 +1378,49 @@ header nav.menu-header.show {
 }
 
 .problemas-tarjeta_accion h3 {
-  color: #4B7F52;
+  color: var(--verde-primario);
   font-size: 1.3rem;
   margin-bottom: 10px;
 }
 
-.tarjeta-accion p {
+.problemas-tarjeta_accion p {
   font-size: 1rem;
-  color: #4a4a4a;
+  color: var(--texto);
   line-height: 1.6;
 }
+
+/* PROBLEMAS MEDIA QUERIES */
+
+@media (max-width: 480px) {
+  .problemas-tarjetas_invasoras {
+    flex-direction: column;
+    align-items: center;
+  }
+  .problemas-contenedor_impacto {
+    flex-direction: column;
+    gap: 25px;
+    align-items: stretch;
+  }
+  .problemas-imagen_impacto,
+  .problemas-texto_impacto {
+    flex: 1 1 100%;
+  }
+  .problemas-tarjetas_desafios {
+    flex-direction: column;
+    align-items: center;
+  }
+  .problemas-tarjeta_desafio p {
+    padding-top: 10px;
+    padding-bottom: 32px;
+  }
+  .problemas-tarjetas_accion {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 481px) and (max-width: 960px) {
+
+}
+
 
 /* FOOTER */
 
