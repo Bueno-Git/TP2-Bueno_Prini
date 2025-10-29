@@ -1,0 +1,15 @@
+---Principales---
+#4B7F52 verde palmar: (Color principal)
+#E6B450 amarillo palmar: (Patron header y menu)
+#3E6B46 verde un poco oscuro: (Decoraciones, boton cta)
+#f0fff0 verde muy clarito: (Posible separación de fondos)
+#dad3c7 beige claro: (Fondo general)
+
+---Secundarios---
+#f9f7f3 blanco clarito: (Posible separación de fondos)
+#f7faf7 blanco clarito: (Posible separación de fondos)
+#f5fff5 blanco clarito: (Posible separación de fondos)
+#264027 verde oscuro: (Titulos)
+#2e8b57 verde: (Texto, Detalle de color en tarjetas)
+#4a4a4a negro/gris: (Texto simple)
+white: (Fondo de las tarjetas)
